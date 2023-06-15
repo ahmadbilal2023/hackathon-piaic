@@ -6,16 +6,23 @@ import p3 from "/public/p3.png";
 import p4 from "/public/p4.png";
 import p5 from "/public/p5.png";
 import p6 from "/public/p6.png";
+import { products } from "@/lib/mock";
+import { StaticImageData } from "next/image";
 
 const Product = () => {
+  const productArray = products.slice(0, 6);
   return (
-    <div className="flex justify-around flex-wrap md:mt-48 mt-8">
-      <ProductCard title="Flex Sweatshirt" price={104} img={p1} />
-      <ProductCard title="Cameryen" price={545} img={p2} />
-      <ProductCard title="Flex Sweatshirt" price={104} img={p3} />
-      <ProductCard title="Flex Sweatshirt" price={104} img={p4} />
-      <ProductCard title="Flex Sweatshirt" price={104} img={p5} />
-      <ProductCard title="Flex Sweatshirt" price={104} img={p6} />
+    <div className="flex justify-around flex-wrap md:mt-48 mt-8 py-6">
+      {productArray.map((product) => (
+        <ProductCard
+          key={product.id}
+          title={product.name}
+          price={product.price}
+          img={product.image as StaticImageData}
+          category={product.category}
+          id={product.id}
+        />
+      ))}
     </div>
   );
 };
