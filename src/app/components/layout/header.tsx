@@ -2,10 +2,12 @@ import Image from "next/image";
 import Logo from "/public/Logo.webp";
 import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
+import { InputWithButton } from "@/view/input";
+import { MenubarDemo } from "../menuBar";
 
 const Header = () => {
   return (
-    <div className="md:flex flex justify-between md:items-center py-6">
+    <div className="md:flex flex justify-between md:items-center sticky top-0 md:bg-green-200 md:px-4 py-4">
       <Link href={"/"}>
         <Image src={Logo} alt={"logo"} className="w-44" />
       </Link>
@@ -26,9 +28,14 @@ const Header = () => {
           <Link href={"/products"}> All Products </Link>
         </div>
       </div>
-
-      <div className="md:h-10 md:w-10 md:rounded-full md:bg-gray-300 md:flex md:justify-center md:items-center">
+      <div className="md:flex hidden">
+        <InputWithButton />
+      </div>
+      <div className="md:h-10 md:w-10 md:rounded-full hidden md:bg-gray-300 md:flex md:justify-center md:items-center">
         <ShoppingCart className="md:h-6 md:w-6" />
+      </div>
+      <div className="md:hidden flex justify-end">
+        <MenubarDemo />
       </div>
     </div>
   );

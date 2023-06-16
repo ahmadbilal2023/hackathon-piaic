@@ -1,7 +1,6 @@
 import ProductCard from "@/view/ProductCard";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import p1 from "/public/p1.png";
 import { products } from "@/lib/mock";
 
 const allProduct = () => {
