@@ -1,30 +1,31 @@
-import { products } from "@/lib/mock";
-import ProductCard from "@/view/ProductCard";
-import { StaticImageData } from "next/image";
 
-const getProductByCategory = (category: string) => {
-  return products.filter((product) => product.category === category);
+
+import { products } from "@/lib/mock";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
+
+const getProductsDetail = (id: number | string) => {
+  return products.filter((product) => product.id == id);
 };
 
 export default function Page({ params }: { params: { id: string } }) {
-  const result = getProductByCategory(params.id);
-  return (
-    <div className="flex justify-around flex-wrap md:mt-34 mt-8 py-6">
-      {/* {result.length > 0 ? (
-        result.map((product) => (
-          <ProductCard
-            key={product.id}
-            title={product.name}
-            price={product.price}
-            img={product.image as StaticImageData}
-            category={product.category}
-          />
-        ))
-      ) : (
-        <p className="text-6xl font-bold">No category found</p>
-      )} */}
+  const result = getProductsDetail(params.id);
 
-      this page is for product {params.id}
+  return (
+    <div className="flex mt-16 py-10 flex-wrap">
+      {result.map((product) => (
+        <div key={product.id} className="flex justify-between gap-6">
+          <div>
+            <Image src={product.image} alt={product.name} />
+          </div>
+          <div>
+            Product Detail
+            <p>Name {product.name}</p>
+            <p>Price {product.price}</p>
+            <p>Category {product.category}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { MenubarDemo } from "../menuBar";
 
 const Header = () => {
   return (
-    <div className="md:flex flex justify-between md:items-center sticky top-0 md:bg-green-200 md:px-4 py-4">
+    <div className="md:flex flex justify-between md:items-center md:sticky md:top-0 md:z-[100] md:bg-green-200 md:px-4 py-4">
       <Link href={"/"}>
         <Image src={Logo} alt={"logo"} className="w-44" />
       </Link>
