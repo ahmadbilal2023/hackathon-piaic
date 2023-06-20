@@ -17,11 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className="md:max-w-6xl mx-auto px-5 md:px-0">
+      <body className={`${inter.className} md:max-w-6xl md:mx-auto px-5 md:px-0`}>
+        <main className="">
           <Header />
           {children}
-          <Footer/>
+          <Footer />
         </main>
       </body>
     </html>
