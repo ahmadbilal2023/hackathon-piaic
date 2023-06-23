@@ -6,4 +6,5 @@ export type ProductType = {
   price: number;
   category: string;
   image: StaticImageData;
+  tagline:string;
 };

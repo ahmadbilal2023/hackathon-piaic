@@ -11,6 +11,7 @@ export const products: ProductType[] = [
   {
     id: 1,
     name: "Product 1",
+    tagline: "Dress",
     price: 20,
     category: "Female",
     image: p1,
@@ -18,6 +19,7 @@ export const products: ProductType[] = [
   {
     id: 2,
     name: "Product 2",
+    tagline: "Dress",
     price: 200,
     category: "Female",
     image: p2,
@@ -25,6 +27,7 @@ export const products: ProductType[] = [
   {
     id: 3,
     name: "Product 3",
+    tagline: "Dress",
     price: 250,
     category: "Female",
     image: p3,
@@ -32,6 +35,7 @@ export const products: ProductType[] = [
   {
     id: 4,
     name: "Product 4",
+    tagline: "Dress",
     price: 300,
     category: "Female",
     image: p7,
@@ -39,6 +43,7 @@ export const products: ProductType[] = [
   {
     id: 5,
     name: "Product 5",
+    tagline: "Dress",
     price: 400,
     category: "Male",
     image: p5,
@@ -46,6 +51,7 @@ export const products: ProductType[] = [
   {
     id: 6,
     name: "Product 6",
+    tagline: "Dress",
     price: 500,
     category: "Kids",
     image: p6,
