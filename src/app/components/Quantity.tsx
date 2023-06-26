@@ -19,7 +19,7 @@ const Quantity = () => {
       <span className="text-sm font-medium">{num}</span>
       {/* plus */}
       <div
-        className="border cursor-pointer h-7 w-7 rounded-full center"
+        className="border cursor-pointer h-7 w-7  rounded-full center"
         onClick={() => {
           setNum(num + 1);
         }}

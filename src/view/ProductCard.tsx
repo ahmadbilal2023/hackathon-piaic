@@ -1,9 +1,11 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { Button } from "../../components/ui/button";
+import { ShoppingCart } from "lucide-react";
 
 const ProductCard = (props: {
   title: string;
-  price: number;
+  price: string;
   img: StaticImageData;
   category: string;
   id: number;
@@ -19,6 +21,11 @@ const ProductCard = (props: {
             Category{" "}
             <span className="text-base font-normal">{props.category}</span>
           </p>
+        </div>
+        <div>
+          <Button className="bg-black text-base h-6 px-4 py-5 rounded-none font-bold md:text-lg">
+            <ShoppingCart className="mr-3" /> Add to Cart
+          </Button>
         </div>
       </div>
     </Link>
