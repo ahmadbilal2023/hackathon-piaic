@@ -15,7 +15,7 @@ export default function Page({ params }: { params: { id: string } }) {
   return (
     <div className="flex flex-col md:flex-row justify-center mt-16 py-10 flex-wrap">
       {result.map((product) => (
-        <div key={product.id} className="flex justify-between gap-6">
+        <div key={product.id} className="flex flex-col md:flex-row justify-between gap-6">
           {/* left image */}
           <div>
             <Image
@@ -28,7 +28,7 @@ export default function Page({ params }: { params: { id: string } }) {
           {/* right content */}
           <div className="ml-5 md:space-y-20 md:mt-10">
             <div>
-              <h1 className="text-4xl font-semibold">{product.name}</h1>
+              <h1 className="md:text-4xl text-lg font-semibold">{product.name}</h1>
               <h2 className="text-base text-gray-400 font-semibold">
                 {product.tagline}
               </h2>
@@ -39,7 +39,7 @@ export default function Page({ params }: { params: { id: string } }) {
               <div className="flex gap-x-4">
                 {sizes.map((items) => {
                   return (
-                    <div className="h-6 w-6 mt-3 rounded-full cursor-pointer hover:shadow-2xl border center">
+                    <div key={1} className="h-6 w-6 mt-3 rounded-full cursor-pointer hover:shadow-2xl border center">
                       <span className="text-[12px] font-semibold text-center">
                         {items}
                       </span>
@@ -55,11 +55,11 @@ export default function Page({ params }: { params: { id: string } }) {
                 </div>
               </div>
             </div>
-            <div className="mt-8 flex items-center gap-x-6">
-              <Button className="bg-black text-base h-6 px-4 py-5 rounded-none font-bold md:text-lg">
+            <div className="mt-8 flex flex-col md:flex-row md:items-center gap-x-6">
+              <Button className="bg-black text-xs h-6 px-4 py-5 rounded-none font-bold md:text-lg">
                 <ShoppingCart className="mr-3" /> Add to Cart
               </Button>
-              <p className="text-2xl font-bold">${product.price}</p>
+              <p className="md:text-2xl text-xl mt-2 md:mt-0 font-bold">${product.price}</p>
             </div>
           </div>
         </div>

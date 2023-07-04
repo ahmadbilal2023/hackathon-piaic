@@ -12,7 +12,7 @@ import { StaticImageData } from "next/image";
 const Product = () => {
   const productArray = products.slice(0, 6);
   return (
-    <div className="flex justify-around flex-wrap md:mt-48 mt-8 py-6">
+    <div className="flex justify-around flex-wrap md:mt-48 mt-16 py-6">
       {productArray.map((product) => (
         <ProductCard
           key={product.id}

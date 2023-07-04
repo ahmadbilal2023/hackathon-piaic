@@ -1,20 +1,21 @@
 import React from "react";
-import logoFooter from "/public/footerlogo.png";
+import Logo from "/public/Logo.webp";
 import Image from "next/image";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
-      <div className="md:flex md:justify-between flex-col md:flex-row md:px-10 items-center py-10 mt-10">
+      <div className="flex md:justify-between flex-col md:flex-row md:px-10 md:items-center py-10 mt-10">
         <div className="space-y-5">
           <div>
             <Image
-              src={logoFooter}
+              src={Logo}
               alt="footerlogo"
-              className="h-[130px] w-[150px]"
+            
             />
           </div>
           <div className="md:w-[300px] w-[200px] font-bold text-sm md:text-base">
@@ -65,12 +66,12 @@ const Footer = () => {
       <div className="mb-12">
         <div className="h-1 w-full bg-gray-300"></div>
       </div>
-      <div className="flex justify-between mb-16 flex-col space-y-3 md:space-y-0 md:flex-row text-sm md:text-xl">
+      <div className="flex md:justify-between text-center mb-16 flex-col space-y-3 md:space-y-0 md:flex-row text-sm md:text-xl">
         <div>
           <p className="text-xl font-bold"> Copyright © 2022</p> Dine Market
         </div>
-        <div><p className="text-xl font-bold">Design by.</p> Weird Design Studio</div>
-        <div><p className="text-xl font-bold">Code by.</p> shabrina12 on github</div>
+        <div><p className="text-xl font-bold">Design by.</p>Ahmad Bilal Farooqi </div>
+        <div><p className="text-xl font-bold">Code by.</p> <Link target="_blank" href={"https://github.com/ahmadbilal2023"} className="underline underline-offset-2">ahmadbilal2023</Link> on github</div>
       </div>
     </>
   );
